@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>iris prediction</title>
+    </head>
+    <style>
+        .div1{
+            height: 80px;
+            width: 100%;
+            background-color: cornflowerblue;
+        }
+        .div2{
+            height: 100%;
+            width: 100%;
+            background-image: url(/static/bg\ food.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        form{
+            padding-left: 40%;
+            padding-top: 10%;
+        }
+        input{
+            height: 5%;
+            width: 25%;
+            border-radius: 10px;
+
+        }
+    </style>
+    <body>
+        <div class="div1">
+        <h1 align="center">iris prediction</h1>
+        </div>
+        <div class="div2">
+        <form action="{{url_for('predict')}}" method="post" class="form">
+            <input type="text" name="sapell" id="sapell" placeholder="enter the sapel length"><br><br>
+            <input type="text" name="sapelw" id="sapelw" placeholder="enter the sapel width"><br><br>
+            <input type="text" name="patell" id="patell" placeholder="enter the petal length"><br><br>
+            <input type="text" name="patelw" id="patelw" placeholder="enter the petal width"><br><br>
+            <input style="width:20% ;margin-left:3% ;" align="center" type="submit" value="submit">
+        </form>
+        </div>
+    </body>
+</html>

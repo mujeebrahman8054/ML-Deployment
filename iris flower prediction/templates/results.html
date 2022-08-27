@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>iris prediction</title>
+    </head>
+    <style>
+        .div1{
+            height: 80px;
+            width: 100%;
+            background-color: cornflowerblue;
+        }
+        .div2{
+            height: 100%;
+            width: 100%;
+            background-image: url(/static/iris.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: -20px;
+        }
+    </style>    
+    <body>
+        <div class="div1">
+        <h1 align="center">iris prediction</h1>
+        </div>
+        <div class="div2">
+        <h2 style="color: white;padding-left: 40%;padding-top: 20%;">{{prediction_text}}</h2>
+        </div>
+    </body>    
+</html>    
