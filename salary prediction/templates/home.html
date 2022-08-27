@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>salary prediction</title>
+    </head>
+    <style>
+        form{
+            height: 50%;
+            width:20%;
+            border-radius: 10px;
+            border: 1px solid white;
+            background-color: grey;
+            margin-left: 40%;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            background-image: url('/static/salary-increase-900px-16x9.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <body>
+        <div style="height: 80px;width: 100%;background-color: darkgoldenrod;">
+            <h1 align="center" style="color: white;">SALARY PREDICTION</h1>
+        </div>
+        <div class="main">
+        <form align="center" action="{{url_for('predict')}}" method="post" class="form">
+            <h2>PREDICT SALARY</h2>
+            <input type="text" name="yearexp" id="yearexp" placeholder="Enter the years of experience"><br><br>
+            <input type="submit" value="submit" id="submit">
+        </form>
+        </div>
+    </body>
+</html>
