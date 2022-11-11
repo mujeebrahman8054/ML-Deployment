@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>breast cancer prediction</title>
+    </head>
+    <style>
+        .div1{
+            height: 80px;
+            width: 100%;
+            background-color: darkkhaki;
+        }
+        .div2{
+            height: 100%;
+            width: 100%;
+            background-color: cadetblue;
+            margin-top: -2%;
+        }
+        form{
+            padding-left: 41%;
+            padding-top: 2%;
+        }
+        select{
+            padding-left: 0;
+            margin-left: 40px;
+            height: 3%;
+            width: 19%;
+        }
+    </style>
+    <body>
+        <div class="div1">
+          <h1 align="center">BREAST CANCER PREDICTION</h1>
+        </div>
+        <div class="div2">
+            <h2 style="padding-top:20px ;" align="center">Breast Cancer Prediction</h2>
+            <form action="{{url_for('predict')}}" method="post">
+              <!-- <labal for="name">Enter your Name</labal> -->
+              <!-- <input type="text" name="name" id="name"><br><br> -->
+              <label for="age">Age Limit</label>
+              <select name="age" style="margin-left: 45px;" id="age">
+                <option value=0>20-29</option>
+                <option value=1>30-39</option>
+                <option value=2>40-49</option>
+                <option value=3>50-59</option>
+                <option value=4>60-69</option>
+                <option value=5>70-79</option>
+              </select><br><BR>
+              <label for="menopause">Menopause</label>
+              <select name="menopause" style="margin-left: 37px;" id="menopause">
+                <option value=0>ge40</option>
+                <option value=1>It40</option>
+                <option value=2>premeno</option>
+              </select><br><br>
+              <label for="tumor">tumor size</label>
+              <select name="tumor" style="margin-left: 45px;" id="tumor">
+                <option value=0>0-4</option>
+                <option value=1>5-9</option>
+                <option value=2>10-14</option>
+                <option value=3>15-19</option>
+                <option value=4>20-24</option>
+                <option value=5>25-29</option>
+                <option value=6>34-34</option>
+                <option value=7>35-39</option>
+                <option value=8>40-44</option>
+                <option value=9>45-49</option>
+                <option value=10>50-54</option>
+              </select><br><br>
+              <label for="invnodes">inv nodes</label>
+              <select name="invnodes" style="margin-left: 50px;" id="invnodes">
+                <option value=0>0-2</option>
+                <option value=1>3-5</option>
+                <option value=2>6-8</option>
+                <option value=3>9-11</option>
+                <option value=4>12-14</option>
+                <option value=5>15-17</option>
+                <option value=6>24-26</option>
+              </select><br><br>
+              <label for="nodecap">Nodecaps</label>
+              <select name="nodecap" style="margin-left: 50px;" id="nodecap">
+                <option value=0>No</option>
+                <option value=1>Yes</option>
+              </select><br><br>
+              <label for="degmalig">Deg malig</label>
+              <select name="degmalig" style="margin-left: 47px;" id="degmalig">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+              </select><br><br>
+              <label for="breast">Breast</label>
+              <select name="breast" style="margin-left: 75px;" id="breast">
+                <option value=0>Left</option>
+                <option value=1>Right</option>  
+              </select><br><br>
+              <label for="breastquad">Breast quad</label>
+              <select name="breastquad" id="breastquad">
+                
+                <option value=0>central</option>
+                <option value=1>left low</option>
+                <option value=2>left up</option>
+                <option value=3>right low</option>
+                <option value=4>right up</option> 
+              </select><br><br>
+              <label for="irradiat">Irradiat</label>
+              <select name="irradiat" style="margin-left: 70px;" id="irradiat">
+                <option value=0>No</option>
+                <option value=1>Yes</option>
+              </select><br><br>
+              <input align="center" style="height: 3%;width: 10%;margin-left: 10%;" type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

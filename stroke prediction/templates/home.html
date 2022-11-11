@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>stroke prediction</title>
+    </head>
+    <style>
+        .div1{
+            height: 80px;
+            width: 100%;
+            background-color: burlywood;
+        }
+        .div2{
+            height: 100%;
+            width: 100%;
+            background-color: darkseagreen;
+        }
+        form{
+            padding-left: 40%;
+            border: 2px solid black;
+            padding-top: 10px;
+        }
+    </style>
+    <body>
+        <div class="div1">
+            <h1 align="center">STROKE PREDICTION</h1>
+        </div>
+        <div class="div2">
+         <h2 align="center">Stroke Prediction</h2>
+         <form action="{{url_for('predict')}}" method="post">
+            <!-- <label for="name">Enter your Name</label> -->
+            <!-- <input type="text" name="name" id="name"><br><br> -->
+            <label for="gender">Gender</label>
+            <select style="margin-left: 7.2%;" name="gender" id="gender">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br><br>
+            <label for="age">Enter your Age</label>
+            <input style="margin-left: 1.7%;" type="text" name="age" id="age"><br><br>
+            <label for="hypert">Hypertension</label>
+            <select style="margin-left: 3%;" name="hypert" id="hypert">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select><br><br>
+            <label for="heartd">Heart Disease</label>
+            <select style="margin-left: 2.5%;" name="heartd" id="heartd">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select><br><br>
+            <label for="marrd">Marital Status</label>
+            <select style="margin-left: 2.5%;" name="marrd" id="marrd">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label for="worktype">Work type</label>
+            <select style="margin-left: 5.2%;" name="worktype" id="worktype">
+                <option value="0">Govt job</option>
+                <option value="1">Children</option>
+                <option value="2">private</option>
+                <option value="3">Self employed</option>
+                <option value="4">Never worked</option>
+            </select><br><br>
+            <label for="residnce">Residence Type</label>
+            <select style="margin-left: 1.5%;" name="residnce" id="residnce">
+                <option value="0">Rural</option>
+                <option value="1">Urban</option>
+            </select><br><br>
+            <label for="glulevel">Avg.glucose level</label>
+            <input type="text" name="glulevel" id="glulevel"><br><br>
+            <label for="bmi">Bmi</label>
+            <input style="margin-left: 9.5%;" type="text" name="bmi" id="bmi"><br><br> 
+            <label for="smoke">Smoking Status</label>
+            <select style="margin-left: 1.5%;" name="smoke" id="smoke">
+                <option value="0">Unknown</option>
+                <option value="1">Formely smoked</option>
+                <option value="2">Never smoked</option>
+                <option value="3">Smokes</option>
+            </select><br><br>
+            <input style="margin-left: 10%;" type="submit" value="submit">
+         </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>loan prediction</title>
+    </head>
+    <style>
+    .div1{
+        height: 80px;
+        width: 100%;
+        background-color: darkred;
+    }
+    .div2{
+        height: 100%;
+        width: 100%;
+        background-color: coral;
+    }
+    form{
+        padding-left: 40%;
+        padding-top: 3%;
+    }
+    </style>
+    <body>
+        <div class="div1">
+           <h1 align="center" style="color: white;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">LOAN PREDICTION</h1>
+        </div>
+        <div class="div2">
+            <div style="border: 2px solid black;">
+        <form action="{{url_for('predict')}}" method="post">
+            <h2 style="padding-left: 30px;">Loan Prediction</h2><br>
+            <label for="gender" id="gender">Gender</label>
+            <select style="margin-left: 12%;" name="gender" id="gender">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br><br>
+            <label for="married" id="married">Married</label>
+            <select style="margin-left: 11.5%;" name="married" id="married">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label for="education" id="education">Education</label>
+            <select style="margin-left: 10%;" name="education" id="education">
+                <option value="0">No Graduate</option>
+                <option value="1">Graduate</option>
+            </select><br><br>
+            <label for="self" id="self">self Employed</label>
+            <select style="margin-left: 6.8%;" name="self" id="self">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label for="income">Applicant Income</label>
+            <input style="margin-left: 4.5%;" type="text" id="income" name="income"><br><br>
+            <label for="coincome">Co Applicant Income</label>
+            <input style="margin-left: 2%;" type="text" id="coincome" name="coincome"><br><br>
+            <label for="loanamt">LOan Amount</label>
+            <input style="margin-left: 7%;" type="text" id="loanamt" name="loanamt"><br><br>
+            <label for="term" id="term">Loan AmountTerm</label>
+            <select style="margin-left: 3.6%;" name="term" id="term">
+                <option value="1">60</option>
+                <option value="2">120</option>
+                <option value="3">180</option>
+                <option value="4">240</option>
+                <option value="5">300</option>
+                <option value="6">360</option>
+            </select><br><br>
+            <label for="credit" id="credit">Credit History</label>
+            <select style="margin-left: 7%;" name="credit" id="Credit">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select><br><br>
+            <label for="area" id="area">Property Area</label>
+            <select style="margin-left: 7.2%;" name="area" id="area">
+                <option value="0">Rural</option>
+                <option value="1">semiUrban</option>
+                <option value="2">Urban</option>
+            </select><br><br>
+            <input style="margin-left: 10%;" type="submit" value="Submit">
+        </form>
+            </div>
+        </div>
+    </body>
+</html>
